@@ -1,8 +1,8 @@
-a.title:link {
-    color: #34639f;;
+a:link {
+    color: #34639f;
 }
 
-a.title:visited {
+a:visited {
     color: #4075ba;
 }
 
@@ -10,6 +10,15 @@ a.title {
     padding: 0;
     margin: 0;
     text-decoration: none;
+}
+
+.page-nav-link {
+    margin: 0.5em;
+}
+
+a.page-nav-link {
+    color: #34639f;
+    cursor: pointer;
 }
 
 p.snippet {
@@ -30,5 +39,11 @@ div.result {
 }
 
 #result-list {
+    width: 751px;
+}
+
+#page-nav {
+    margin-top: 2em;
+    text-align: center;
     width: 751px;
 }
