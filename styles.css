@@ -1,0 +1,34 @@
+a.title:link {
+    color: #34639f;;
+}
+
+a.title:visited {
+    color: #4075ba;
+}
+
+a.title {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+p.snippet {
+    padding: 0;
+    margin: 0;
+}
+
+p.url {
+    color: #777;
+    font-size: 1em !important;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+div.result {
+    margin: 1.5em 0 1em 0;
+}
+
+#result-list {
+    width: 751px;
+}

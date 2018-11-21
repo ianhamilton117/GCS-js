@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src="search.js"></script>
+
+<head>
+    <title>Google Custom Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <input type="text" id="searchInput" name="searchInput">
+    <button onclick="basicSearch()" id="onSearch">Search</button>
+
+    <div id="result-list">
+
+    </div>
+
+    <script>
+        // Use enter key to trigger search button
+        document.querySelector("#searchInput").addEventListener("keyup", event => {
+            if (event.key !== "Enter") return;
+            document.querySelector("#onSearch").click();
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+</html>
