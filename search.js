@@ -1,10 +1,8 @@
 const apiUrl = "https://www.googleapis.com/customsearch/v1";
-// const key = "AIzaSyBqcrX7zwelHrLUsH0R8KOI-aMCTlnrp3g"; //Google API key
-// const cx = "014722161919417917553:vmkwzgw4l5u"; //Google search engine ID
 
 let params = {
-    key: "AIzaSyBqcrX7zwelHrLUsH0R8KOI-aMCTlnrp3g", //Google API key
-    cx: "014722161919417917553:vmkwzgw4l5u", //Google search engine ID
+    key: "AIzaSyBqcrX7zwelHrLUsH0R8KOI-aMCTlnrp3g", // Google API key
+    cx: "014722161919417917553:vmkwzgw4l5u", // Google search engine ID
     q: ''
 }
 
@@ -47,23 +45,5 @@ function populateResultsText(resultsObj) {
         `;
     });
     document.getElementById("result-list").innerHTML = resultsString;
-
 }
-
-// class SearchResults {
-//     constructor(
-//         public results: SearchResult[],
-//         public numPages: number,
-//         public currentPage: number,
-//         public status: SearchStatus
-//     ) {}
-// }
-// class SearchResult {
-//     constructor(
-//         public htmlTitle: string,
-//         public htmlSnippet: string,
-//         public link: string,
-//         public displayLink: string
-//     ) {}
-// }
 
