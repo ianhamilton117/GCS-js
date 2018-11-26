@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<script src="search.js"></script>
+
+<head>
+    <title>Google Custom Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        with
+                        <b>all</b> of the words
+                    </td>
+                    <td>
+                        <input id="reqWords" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        with the
+                        <b>exact phrase</b>
+                    </td>
+                    <td>
+                        <input id="exactPhrase" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        with
+                        <b>any</b> of the words
+                    </td>
+                    <td>
+                        <input id="anyWords" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>without</b> the words
+                    </td>
+                    <td>
+                        <input id="withoutWords" type="text" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        File Format
+                    </td>
+                    <td>
+                        <select id="fileFormat">
+                            <option value></option>
+                            <option value="pdf">Adobe Acrobat PDF (.pdf)</option>
+                            <option value="ps">Adobe Postscript (.ps)</option>
+                            <option value="doc">Microsoft Word (.doc)</option>
+                            <option value="xls">Microsoft Excel (.xls)</option>
+                            <option value="ppt">Microsoft Powerpoint (.ppt)</option>
+                            <option value="rtf">Rich Text Format (.rtf)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <button onclick="advancedSearch()" id="onSearch">Search</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <a href="/index.html">Basic Search</a>
+
+    <div id="result-list"></div>
+
+    <div id="page-nav"></div>
+
+    <script>
+        // Use enter key to trigger search button
+        document.querySelector("#reqWords").addEventListener("keyup", event => listenForEnterKey(event));
+        document.querySelector("#exactPhrase").addEventListener("keyup", event => listenForEnterKey(event));
+        document.querySelector("#anyWords").addEventListener("keyup", event => listenForEnterKey(event));
+        document.querySelector("#withoutWords").addEventListener("keyup", event => listenForEnterKey(event));
+
+        function listenForEnterKey(event) {
+            if (event.key !== "Enter") return;
+            document.querySelector("#onSearch").click();
+            event.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>

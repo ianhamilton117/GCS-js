@@ -38,6 +38,10 @@ div.result {
     margin: 1.5em 0 1em 0;
 }
 
+button {
+    cursor: pointer;
+}
+
 #result-list {
     width: 751px;
 }
