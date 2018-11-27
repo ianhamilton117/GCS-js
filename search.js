@@ -56,13 +56,26 @@ function executeSearch() {
     http.open("GET", url);
     http.send();
 
-    http.onreadystatechange = function(e) {
-        console.log(e);
-        try {
-            var resultsObj = JSON.parse(http.response);
-            populateResultsText(resultsObj);
-        } catch (e) {
-            console.error(e);
+    http.onreadystatechange = function(event) {
+        if(http.readyState === 4 && http.status === 200) {
+            try {
+                var resultsObj = JSON.parse(http.response);
+                var numResults = resultsObj.queries.request[0].totalResults;
+                if (numResults == 0) {
+                    if (currentPage <= 1) {
+                        document.getElementById("result-list").innerHTML = 'Your search did not match any results.';
+                        document.getElementById("page-nav").innerHTML = '';
+                    } else {
+                        // If the page requested doesn't have any results, we try again with the previous page. 
+                        // This is neccessary because Google's API sometimes promises more results than it actually has.
+                        pageNav(currentPage - 1);
+                    }
+                } else {
+                    populateResultsText(resultsObj);
+                }
+            } catch (error) {
+                console.error(error);
+            }
         }
     }
 }
