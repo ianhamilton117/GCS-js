@@ -1,5 +1,5 @@
 var apiUrl = "https://www.googleapis.com/customsearch/v1";
-var key = "AIzaSyBqcrX7zwelHrLUsH0R8KOI-aMCTlnrp3g"; // Google API key
+var key = "AIzaSyBbKSgHIjTElfsgiZFU-U_KwVld-0sgdes"; // Google API key
 var cx = "014722161919417917553:vmkwzgw4l5u"; // Google search engine ID
 var searchParams;
 
@@ -83,10 +83,10 @@ function executeSearch() {
 function populateResultsText(resultsObj) {
     var resultsHtml = '';
     resultsObj.items.forEach(function(item) {
-        resultsHtml += '<hr><div class="result">' +
+        resultsHtml += '<div class="result">' +
             '<a class="title" href="' + item.link + '">' + item.htmlTitle + '</a>' +
-            '<p class="snippet">' + item.htmlSnippet + '</p>' +
             '<p class="url" title="' + item.link + '">' + item.link + '</p>' +
+            '<p class="snippet">' + item.htmlSnippet + '</p>' +
             '</div>';
     });
     document.getElementById("result-list").innerHTML = resultsHtml;

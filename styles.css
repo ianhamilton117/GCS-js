@@ -1,14 +1,15 @@
 a:link {
-    color: #34639f;
+    color: #1a0dab;
 }
 
 a:visited {
-    color: #4075ba;
+    color: #609;
 }
 
 a.title {
-    padding: 0;
+    font-size: 18px;
     margin: 0;
+    padding: 0;
     text-decoration: none;
 }
 
@@ -21,17 +22,26 @@ a.page-nav-link {
     cursor: pointer;
 }
 
+body {
+    font-family: 'Roboto',arial,sans-serif;
+}
+
 p.snippet {
-    padding: 0;
+    color: #545454;
+    font-size: 14px;
+    line-height: 1.4;
     margin: 0;
+    padding: 3px 0 2px;
+    word-wrap: break-word;
 }
 
 p.url {
-    color: #777;
-    font-size: 1em !important;
-    overflow: hidden;
-    padding: 0;
+    color: #006621;
+    font-size: 14px;
     margin: 0;
+    overflow: hidden;
+    padding: 1px 0 0;
+    word-wrap: break-word;
 }
 
 div.result {
