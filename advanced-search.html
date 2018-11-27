@@ -81,10 +81,10 @@
 
     <script>
         // Use enter key to trigger search button
-        document.querySelector("#reqWords").addEventListener("keyup", event => listenForEnterKey(event));
-        document.querySelector("#exactPhrase").addEventListener("keyup", event => listenForEnterKey(event));
-        document.querySelector("#anyWords").addEventListener("keyup", event => listenForEnterKey(event));
-        document.querySelector("#withoutWords").addEventListener("keyup", event => listenForEnterKey(event));
+        document.querySelector("#reqWords").addEventListener("keyup", function(event) {listenForEnterKey(event)});
+        document.querySelector("#exactPhrase").addEventListener("keyup", function(event) {listenForEnterKey(event)});
+        document.querySelector("#anyWords").addEventListener("keyup", function(event) {listenForEnterKey(event)});
+        document.querySelector("#withoutWords").addEventListener("keyup", function(event) {listenForEnterKey(event)});
 
         function listenForEnterKey(event) {
             if (event.key !== "Enter") return;
