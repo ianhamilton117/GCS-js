@@ -14,6 +14,7 @@ function basicSearch() {
     gcs_searchParams.cx = gcs_cx;
     gcs_searchParams.q = document.getElementById("searchInput").value;
     gcs_searchParams.start = 1;
+    gcs_currentPage = 1;
 
     executeSearch();
 }
@@ -30,6 +31,7 @@ function advancedSearch() {
     gcs_searchParams.excludeTerms = document.getElementById("withoutWords").value;
     gcs_searchParams.fileType = document.getElementById("fileFormat").value;
     gcs_searchParams.start = 1;
+    gcs_currentPage = 1;
 
     executeSearch();
 }
