@@ -84,7 +84,7 @@ function populateResultsText(resultsObj) {
     var resultsHtml = '';
     resultsObj.items.forEach(function(item) {
         resultsHtml += '<div class="result">' +
-            '<a class="title" href="' + item.link + '">' + item.htmlTitle + '</a>' +
+            '<a class="title" href="' + item.link + '">' + getFileFormat(item) + item.htmlTitle + '</a>' +
             '<p class="url" title="' + item.link + '">' + item.link + '</p>' +
             '<p class="snippet">' + item.htmlSnippet + '</p>' +
             '</div>';
@@ -112,3 +112,17 @@ function populateResultsText(resultsObj) {
     document.getElementById("page-nav").innerHTML = pageNavHtml;
 }
 
+function getFileFormat(item) {
+    switch(item.fileFormat) {
+        case 'PDF/Adobe Acrobat':
+            return '[PDF] ';
+        case 'Microsoft Word':
+            return '[DOC] ';
+        case 'Microsoft Excel':
+            return '[XLS] ';
+        case 'Microsoft Powerpoint':
+            return '[PPT] ';
+        default:
+            return '';
+    }
+}
